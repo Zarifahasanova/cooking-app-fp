@@ -15,6 +15,10 @@ const styles = StyleSheet.create({
         alignItems: 'center'
             // backgroundColor: '#2cd18a'
     },
+    btnIcon: {
+        height: 20,
+        width: 20
+    },
     text: {
         fontSize: 14,
         color: '#2cd18a'
