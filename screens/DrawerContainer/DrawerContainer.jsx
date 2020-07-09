@@ -3,7 +3,7 @@ import { View} from 'react-native';
 import styles from './styles';
 import PropTypes from 'prop-types';
 import MenuButton from '../../components/MenuButton/MenuButton';
-
+import { AppIcon } from "../../style/AppStyles";
 export default class DrawerContainer extends React.Component {
   render() {
     const { navigation } = this.props;
@@ -35,13 +35,29 @@ export default class DrawerContainer extends React.Component {
             }}
           />
           <MenuButton
-            title="USER SETTINGS"
-            source={require('../../assets/icons/settings.png')}
+            title="SIGNUP"
+            source={require('../../assets/icons/signup.png')}
             onPress={() => {
-              navigation.navigate('Settings');
+              navigation.navigate('SignUp');
               navigation.closeDrawer();
             }}
           />
+          <MenuButton
+            title="LOGIN"
+            source={require('../../assets/icons/login.jpg')}
+            onPress={() => {
+              navigation.navigate('Login');
+              navigation.closeDrawer();
+            }}
+          /><MenuButton
+          title="LOGOUT"
+          source={require('../../assets/icons/logout.png')}
+          onPress={() => {
+            navigation.navigate('Dashboard');
+            navigation.closeDrawer();
+          }}
+        />
+          
         </View>
       </View>
     );

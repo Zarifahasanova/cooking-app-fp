@@ -1,8 +1,16 @@
 import React from 'react';
-import { createAppContainer } from 'react-navigation';
+import { Animated, Easing, Image, StyleSheet } from "react-native";
+import { connect } from "react-redux";
+import { createAppContainer,createBottomTabNavigator } from 'react-navigation';
+
 import {createStackNavigator} from 'react-navigation-stack'
 import {createDrawerNavigator} from 'react-navigation-drawer' 
 import HomeScreen from '../screens/Home/HomeScreen';
+import LoginScreen from "../screens/Login/LoginScreen";
+import SignUpScreen from "../screens/SignUp/SignUpScreen";
+import Dashboard from "../screens/Dashboard/Dashboard";
+
+
 import CategoriesScreen from '../screens/Categories/CategoriesScreen';
 import RecipeScreen from '../screens/Recipe/RecipeScreen';
 import RecipesListScreen from '../screens/RecipeList/RecipesListScreen';
@@ -10,7 +18,7 @@ import DrawerContainer from '../screens/DrawerContainer/DrawerContainer';
 import IngredientScreen from '../screens/Ingredient/IngredientScreen';
 import IngredientsDetailsScreen from '../screens/IngredientsDetails/IngredientsDetailsScreen';
 import SearchScreen from '../screens/Search/SearchScreen';
-import UserSettingsScreen from '../screens/UserSettings/UserSettingsScreen'
+
 
 
 /* const Stack = createStackNavigator();
@@ -38,6 +46,7 @@ function MainNavigator() {
   )
 } */
 
+
 const MainNavigator = createStackNavigator(
   {
     Home: HomeScreen,
@@ -47,11 +56,14 @@ const MainNavigator = createStackNavigator(
     Ingredient: IngredientScreen,
     Search: SearchScreen,
     IngredientsDetails: IngredientsDetailsScreen,
-    UserSettings: UserSettingsScreen
+    Login:LoginScreen,
+    SignUp: SignUpScreen,
+    Dashboard:Dashboard
   },
+  
   {
-    initialRouteName: 'Home',
-    // headerMode: 'float',
+    initialRouteName: 'SignUp',
+    //  headerMode: 'float',
     defaulfNavigationOptions: ({ navigation }) => ({
       headerTitleStyle: {
         fontWeight: 'bold',
