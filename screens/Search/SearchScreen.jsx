@@ -1,13 +1,13 @@
 import React from 'react';
 import {
   FlatList,
-  Text,
   View,
   Image,
   TouchableHighlight
 } from 'react-native';
+import {CustomText as Text} from '../../components/CustomText'
 import styles from './styles';
-import { ListItem, SearchBar } from 'react-native-elements';
+
 import MenuImage from '../../components/MenuImage/MenuImage';
 import {
   getCategoryName,
@@ -15,6 +15,10 @@ import {
   getRecipesByCategoryName,
   getRecipesByIngredientName
 } from '../../data/DataAPI';
+
+import { ListItem, SearchBar } from 'react-native-elements';
+
+
 
 export default class SearchScreen extends React.Component {
   static navigationOptions = ({ navigation }) => {
