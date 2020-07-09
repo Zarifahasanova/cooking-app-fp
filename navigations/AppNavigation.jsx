@@ -21,7 +21,7 @@ import SearchScreen from '../screens/Search/SearchScreen';
 
 
 
-/* const Stack = createStackNavigator();
+ const Stack = createStackNavigator();
 
 function MainNavigator() {
   return(
@@ -44,7 +44,7 @@ function MainNavigator() {
       <Stack.Screen name='IngredientsDetails' component={IngredientsDetailsScreen} />
     </Stack.Navigator>
   )
-} */
+} 
 
 
 const MainNavigator = createStackNavigator(
@@ -75,7 +75,7 @@ const MainNavigator = createStackNavigator(
   }
 ); 
 
-/* const Drawer = createDrawerNavigator();
+ const Drawer = createDrawerNavigator();
 
 function DrawerStack() {
   return(
@@ -90,7 +90,7 @@ function DrawerStack() {
       <Drawer.Screen name='Main' component={MainNavigator} />
     </Drawer.Navigator>
   )
-} */
+} 
 
 const DrawerStack = createDrawerNavigator(
   {
@@ -104,13 +104,13 @@ const DrawerStack = createDrawerNavigator(
   }
 );
 
-/* export default function AppContainer() {
+ export default function AppContainer() {
   return(
     <NavigationContainer>
       <DrawerStack/>
     </NavigationContainer>
   )
-} */
+} 
  
 export default AppContainer = createAppContainer(DrawerStack);
 
